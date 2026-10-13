@@ -38,7 +38,7 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 - Use the user-supplied Dot Cursor behavior site-wide: a yellow head with a matching yellow canvas trail, an outlined enlarged state over controls, and no effect for touch or reduced-motion users.
 - On the home Works section, omit the “查看更多” link and place a centered “Download Resume ↓” button beneath the project grid; it downloads the local `public/assets/resume/lijing-uiux-resume.pdf` file.
 - All source imagery, GIFs, audio, video, and the resume PDF must be served locally; Spotify embeds may remain live integrations.
-- For GitHub Pages at `huochai2021-spec.github.io/design-website-1`, deploy the `dist/client` build artifact through `.github/workflows/deploy.yml` with `VITE_BASE_PATH=/design-website-1/`; retain the public-asset URL rewrite plugin so local assets load from the repository subpath.
+- For GitHub Pages at `huochai2021-spec.github.io/design-website-1`, publish from the `pages-production` branch through `.github/workflows/deploy.yml`. Build `dist/client` with `VITE_BASE_PATH=/design-website-1/` and `VITE_PUBLIC_DIR=deploy-public`; retain the public-asset URL rewrite plugin so local assets load from the repository subpath. The production branch intentionally contains only the current site's required assets, while the local `public/` folder remains the complete source library.
 
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.
 
